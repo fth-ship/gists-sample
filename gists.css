@@ -1,0 +1,9 @@
+/* CSS declarations go here */
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+label {
+    clear: both;
+}
