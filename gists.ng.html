@@ -1,27 +1,23 @@
-<div class="container">
-    <h1>Gists</h1>
+<div class="container padding-50">
+    <form>
+        <div class="form-group">
+            <input class="file-name form-control" ng-model="fileName" placeholder="Put here the name of the file..." />
+        </div>
 
-    <div>
-        <label>
-            <input class="file-name" type="text" ng-model="fileName" placeholder="Put here the name of the file..." />
-        </label>
+        <div class="form-group">
+            <textarea class="file-content form-control" ng-model="fileContent" placeholder="Put your code here..." rows="10"></textarea>
+        </div>
 
-        <br><br>
+        <button class="btn btn-default pull-right" ng-click="saveGist(fileName, fileContent)">Save</button>
+    </form>
+</div>
 
-        <label>
-            <textarea class="file-content" ng-model="fileContent" placeholder="Put your code here..." rows="33" cols="100"></textarea>
-        </label>
+<hr>
 
-        <br>
+<div class="container padding-50" ng-show="gists.length">
+    <h2>File list</h2>
 
-        <button ng-click="saveGist(fileName, fileContent)">Save</button>
-    </div>
-
-    <br><hr>
-
-    <div>
-        <ul>
-            <li ng-repeat="gist in gists"><a href="/gist/{{gist._id}}">{{gist.name}}</a></li>
-        </ul>
-    </div>
+    <ul class="list-group">
+       <li class="list-group-item" ng-repeat="gist in gists"><a href="/gist/{{gist._id}}">{{gist.name}}</a></li>
+    </ul>
 </div>

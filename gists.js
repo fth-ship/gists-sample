@@ -36,7 +36,12 @@ if (Meteor.isClient) {
         .controller('GistCtrl', ['$scope', '$meteor', '$log', '$stateParams', function ($scope, $meteor, $log, $stateParams) {
             $log.debug('Gist controller');
             $scope.gist = $meteor.object(Gists, $stateParams._id).subscribe('gists');
-        }]);
+        }])
+        .filter('prettyDate', function () {
+            return function (input) {
+                return moment(input).format('DD/MM/YYYY');
+            };
+        });
     
     gists
         .run(function ($log) {

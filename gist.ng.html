@@ -1,8 +1,9 @@
 <div class="container">
-    <a href="/">Voltar</a>
-    <br>
-    <h1>{{gist.name}}</h1>
-    <div>
+    <h2>{{gist.name}} - created at {{gist.createdAt | prettyDate}}</h2>
+    <hr>
+    <pre style="white-space: pre-line !important;">
         {{gist.content}}
-    </div>
+    </pre>
+    <hr>
+    <a href="/">Voltar</a>
 </div>

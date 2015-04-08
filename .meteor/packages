@@ -9,3 +9,6 @@ insecure
 urigo:angular
 mongo
 angularui:angular-ui-router
+twbs:bootstrap
+msavin:mongol
+momentjs:moment
