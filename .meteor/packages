@@ -5,10 +5,8 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
 urigo:angular
 mongo
 angularui:angular-ui-router
 twbs:bootstrap
-msavin:mongol
 momentjs:moment
